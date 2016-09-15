@@ -5,7 +5,7 @@
 <body>
 <ul>
 {% for todo in todos%}
-<li>{{todo[0]}} <form action="/" method="post"><input type="submit" value="Remove Item" /><input type="hidden" name="item" value= "{{loop.index0}}" /></form></li>
+<li>{{todo[0]}} <form action="/" method="post"><input type="submit" value="Remove Item" /><input type="hidden" name="item" value= "{{todo[1]}}" /></form></li>
 {% endfor %}
 </ul>
 <form action="/" method="post">
