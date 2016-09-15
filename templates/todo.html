@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Brandon's Real first Website</title>
+</head>
+<body>
+<ul>
+{% for todo in todos%}
+<li>{{todo[0]}} <form action="/" method="post"><input type="submit" value="Remove Item" /><input type="hidden" name="item" value= "{{loop.index0}}" /></form></li>
+{% endfor %}
+</ul>
+<form action="/" method="post">
+	New Todo Item<br />
+	<input type="text" name="todo" />
+	<input type="submit" value="Add Item" /> 
+</form>
+</body>
+</html>
